@@ -1,0 +1,26 @@
+# 서버 포트 설정
+server:
+  port: 8092
+
+# db 연동 설정
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/webboard?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: user
+    password: 1234
+  thymeleaf:
+    cache: false
+
+  # spring data jpa 설정
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+
+#logging:
+#  level:
+#    org.hibernate: DEBUG
+#    org.springframework: DEBUG
